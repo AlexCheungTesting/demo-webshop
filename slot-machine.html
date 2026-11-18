@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit Slot Machine - Fruit Shop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header role="banner">
+      <div class="header-center">
+        <a href="index.html" class="logo" aria-label="Go to homepage">
+          <img
+            src="img/fruit-shop-logo.png"
+            class="logo-img"
+            alt="Fruit Shop Logo"
+          />
+          <span class="products-text"> View Products </span>
+        </a>
+        <nav role="navigation" aria-label="Main navigation">
+          <a
+            href="basket.html"
+            class="basket-link"
+            aria-label="View shopping basket"
+          >
+            <img
+              src="img/basket-icon.png"
+              class="basket-img"
+              alt="Shopping basket icon"
+            />
+            <span class="basket-text">View shopping basket</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content" role="main">
+      <div class="content-box">
+        <h1>Fruit Slot Machine</h1>
+        <p>Spin for a random apple, banana, or lemon.</p>
+        <div class="slot-machine" aria-label="Fruit slot machine">
+          <div
+            id="slotFruit"
+            class="slot-fruit"
+            role="img"
+            aria-label="Ready to spin"
+          >
+            🎰
+          </div>
+        </div>
+        <p id="slotStatus" role="status" aria-live="polite">
+          Click below to spin and add a random fruit to your basket.
+        </p>
+        <div class="button-container">
+          <button
+            id="spinAndAdd"
+            class="cart-action-btn"
+            aria-label="Spin and add a random fruit to basket"
+          >
+            Spin &amp; Add to Basket
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a
+        href="https://www.linkedin.com/in/timlolkema/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        By Tim Lolkema
+      </a>
+    </footer>
+    <script src="shop.js"></script>
+    <script>
+      document.getElementById("spinAndAdd").onclick = spinAndAddRandomFruit;
+    </script>
+  </body>
+</html>
